@@ -1,0 +1,167 @@
+@import "menu";
+
+@mixin underlineAnimation($color) {
+  &::after {
+    content: "";
+    display: block;
+    border-bottom: solid 1px $color;
+    width: 0;
+    transition: width 0.3s;
+  }
+  &:hover:after {
+    width: 98%;
+  }
+}
+
+// Global
+* {
+  box-sizing: border-box;
+  font-family: "Oswald", sans-serif;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Oswald", sans-serif;
+  color: #fff;
+  background-color: #000;
+
+  overflow: hidden;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+
+// Home
+section {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: black;
+
+  overflow: hidden;
+  visibility: hidden;
+  &.current {
+    visibility: visible;
+    z-index: 0;
+  }
+
+  // Video Background
+  .bg-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    // overflow: hidden;
+    .bg-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100vw;
+      z-index: 1;
+      background: #000;
+      opacity: 0.5;
+    }
+  }
+
+  // Content
+  .content-container {
+    width: 80vw;
+    height: 80vh;
+    border: #fff solid 1px;
+    // position: absolute;
+    z-index: 99;
+
+    // margin: 0;
+    h1,
+    p,
+    .play-video-btn,
+    .prevnext-btns {
+      display: block;
+      padding: 0;
+      margin: 0;
+      position: absolute;
+      z-index: 80;
+    }
+    h1 {
+      font-size: 4vh;
+      font-weight: 500;
+      letter-spacing: 1vw;
+      top: 47vh;
+      left: 15vw;
+    }
+    p {
+      font-size: 0.8rem;
+      font-weight: 100;
+      letter-spacing: 3px;
+      width: 250px;
+      line-height: 25px;
+      left: 15vw;
+      &.number {
+        top: 42vh;
+      }
+      &.description {
+        top: 55vh;
+      }
+    }
+    .play-video-btn {
+      top: 70vh;
+      left: 15vw;
+      a {
+        font-size: 1rem;
+        font-weight: 500;
+        letter-spacing: 2px;
+        padding: 20px 0;
+        transition: all 0.5s ease-in-out;
+        &:hover {
+          opacity: 0.6;
+          letter-spacing: 10px;
+        }
+      }
+    }
+    .prevnext-btns {
+      bottom: 3vh;
+      right: 3vw;
+    }
+    .prev,
+    .next {
+      display: inline-block;
+      color: white;
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 400;
+      letter-spacing: 2px;
+      @include underlineAnimation(white);
+    }
+  }
+  #view-work-btn {
+    position: absolute;
+    z-index: 80;
+    bottom: 3vh;
+    right: 3vw;
+    font-size: 0.8rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    @include underlineAnimation(white);
+  }
+}
+
+// Video Background Fit
+@media (min-aspect-ratio: 16/9) {
+  video {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-aspect-ratio: 16/9) {
+  video {
+    width: auto;
+    height: 132%;
+  }
+}
