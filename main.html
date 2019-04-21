@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>VOIFILM</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="https://code.jquery.com/jquery-3.4.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+    <script type="text/javascript" src="main.js" async></script>
+  </head>
+  <body>
+    <header>
+      <!-- VoiFilm Icon -->
+      <div id="voifilm-icon" class="icon"><a href="main.html">VOIFILM</a></div>
+
+      <div class="top-right">
+        <ul class="top-right-content">
+          <li class="about top-right-item"><a href="about.html">ABOUT</a></li>
+          <li class="contact top-right-item">
+            <a href="mailto:ky.32012.voilf@gmail.com">CONTACT</a>
+          </li>
+          <li class="youtube top-right-item">
+            <a href="https://www.youtube.com/user/voilf" target="_blank"
+              >YouTube</a
+            >
+          </li>
+          <li class="instagram top-right-item">
+            <a href="https://www.instagram.com/voifilm" target="_blank"
+              >Instagram</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <!-- Menu icon -->
+      <div id="menu-btn">
+        <div class="btn-line top-line"></div>
+        <div class="btn-line middle-line"></div>
+        <div class="btn-line bottom-line"></div>
+      </div>
+      <!-- Smartphone Menu-->
+      <nav class="nav-links-container">
+        <ul class="nav-links">
+          <li class="nav-item">
+            <a href="main.html" class="nav-link">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">ABOUT</a>
+          </li>
+          <li class="nav-item">
+            <a href="mailto:ky.32012.voilf@gmail.com" class="nav-link"
+              >CONTACT</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <div class="overlay-nav">
+        <div id="projects-list">
+          <div class="boxes">
+            <div class="box row project slide-in">
+              <a href="main.html#project1">
+                <div class="col col-video">
+                  <video
+                    src="video/SEEZOO.mp4"
+                    poster="video/SEEZOO_Moment.jpg"
+                  ></video>
+                </div>
+                <div class="col col-text">
+                  <h2>SEEZOO</h2>
+                </div>
+              </a>
+            </div>
+            <div class="box row project slide-in">
+              <a href="main.html#project2">
+                <div class="col col-video">
+                  <video
+                    src="video/BBOY CAP10.mp4"
+                    poster="video/BBOY CAP10_Moment.jpg"
+                  ></video>
+                </div>
+                <div class="col col-text">
+                  <h2>BBOY CAP10</h2>
+                </div>
+              </a>
+            </div>
+            <div class="box row project slide-in">
+              <a href="main.html#project3">
+                <div class="col col-video">
+                  <video
+                    src="video/HongKong _ SONY α6000.mp4"
+                    poster="video/HongKong _ SONY α6000_Moment.jpg"
+                  ></video>
+                </div>
+                <div class="col col-text">
+                  <h2>HongKong</h2>
+                </div>
+              </a>
+            </div>
+            <div class="box row project slide-in">
+              <a href="main.html#project4">
+                <div class="col col-video">
+                  <video
+                    src="video/Freeasy clothing.mp4"
+                    poster="video/Freeasy clothing_Moment.jpg"
+                  ></video>
+                </div>
+                <div class="col col-text">
+                  <h2>Freeasy clothing</h2>
+                </div>
+              </a>
+            </div>
+            <div class="box row project slide-in">
+              <a href="main.html#project5"
+                ><div class="col col-video">
+                  <video
+                    src="video/PLANET EARTH.mp4"
+                    poster="video/PLANET EARTH_Moment.jpg"
+                  ></video>
+                </div>
+                <div class="col col-text">
+                  <h2>PLANET EARTH</h2>
+                </div>
+              </a>
+            </div>
+            <div class="box row project slide-in">
+              <a href="main.html#project6">
+                <div class="col col-video">
+                  <video
+                    src="video/HIVOLTAGE VOL12.mp4"
+                    poster="video/HIVOLTAGE VOL12_Moment.jpg"
+                  ></video>
+                </div>
+                <div class="col col-text">
+                  <h2>HIVOLTAGE VOL12</h2>
+                </div>
+              </a>
+            </div>
+            <div class="box row project slide-in">
+              <a href="main.html#project7"
+                ><div class="col col-video">
+                  <video
+                    src="video/MELBOURNE.mp4"
+                    poster="video/MELBOURNE_Moment.jpg"
+                  ></video>
+                </div>
+                <div class="col col-text">
+                  <h2>MELBOURNE</h2>
+                </div>
+              </a>
+            </div>
+            <div class="box row project slide-in">
+              <a href="main.html#project8">
+                <div class="col col-video">
+                  <video
+                    src="video/Crosswalk.mp4"
+                    poster="video/Crosswalk_Moment.jpg"
+                  ></video>
+                </div>
+                <div class="col col-text">
+                  <h2>Crosswalk</h2>
+                </div>
+              </a>
+            </div>
+            <div class="box row project slide-in">
+              <a href="main.html#project9">
+                <div class="col col-video">
+                  <video
+                    src="video/Piece of Memory.mp4"
+                    poster="video/Piece of Memory_Moment.jpg"
+                  ></video>
+                </div>
+                <div class="col col-text">
+                  <h2>Piece of Memory</h2>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <footer>
+          &copy;2019 Made by
+          <span>
+            <a href="https://www.instagram.com/akrspwb/" target="_blank"
+              >Akira Suto</a
+            >
+          </span>
+        </footer>
+      </div>
+    </header>
+
+    <div class="sections">
+      <section id="home" class="section current">
+        <!-- Video Background -->
+        <div class="bg-container">
+          <video
+            id="video-bg"
+            src="video/PLANET EARTH.mp4"
+            autoplay
+            muted
+            loop
+          ></video>
+          <div class="bg-overlay"></div>
+        </div>
+        <!-- Content -->
+        <div class="content-container">
+          <h1 id="voifilm">VOIFILM</h1>
+          <div id="view-work-btn" class="btn view-work-btn next">
+            <a href="#project1">VIEW WORK</a>
+          </div>
+        </div>
+      </section>
+      <section id="project1" class="section">
+        <!-- Video Background -->
+        <div class="bg-container">
+          <video
+            id="video-bg1"
+            src="video/SEEZOO.mp4"
+            autoplay
+            muted
+            loop
+          ></video>
+        </div>
+        <div class="bg-overlay"></div>
+        <!-- Content -->
+        <div class="content-container">
+          <p class="number"><b>01</b>/09</p>
+          <h1>SEEZOO</h1>
+          <p class="description">
+            Introducing DJ SEEZOO
+          </p>
+          <div class="play-video-btn">
+            <a href="https://youtu.be/5pKWT5xKCiY" target="_blank"
+              >PLAY VIDEO</a
+            >
+          </div>
+
+          <div class="prevnext-btns">
+            <a href="#project9" class="btn prev">PREV 09</a>&nbsp;/&nbsp;
+            <a href="#project2" class="btn next"> NEXT 02</a>
+          </div>
+        </div>
+      </section>
+      <section id="project2" class="section">
+        <!-- Video Background -->
+        <div class="bg-container">
+          <video
+            id="video-bg1"
+            src="video/BBOY CAP10.mp4"
+            autoplay
+            muted
+            loop
+          ></video>
+        </div>
+        <div class="bg-overlay"></div>
+        <!-- Content -->
+        <div class="content-container">
+          <p class="number"><b>02</b>/09</p>
+          <h1>BBOY CAP10</h1>
+          <p class="description">
+            Introducing Bboy Cap10
+          </p>
+          <div class="play-video-btn">
+            <a href="https://youtu.be/KjDP2_A7H9o" target="_blank"
+              >PLAY VIDEO</a
+            >
+          </div>
+          <div class="prevnext-btns">
+            <a href="#project1" class="btn prev">PREV 01</a>&nbsp;/&nbsp;
+            <a href="#project3" class="btn next">NEXT 03</a>
+          </div>
+        </div>
+      </section>
+      <section id="project3" class="section">
+        <!-- Video Background -->
+        <div class="bg-container">
+          <video
+            id="video-bg1"
+            src="video/HongKong _ SONY α6000.mp4"
+            autoplay
+            muted
+            loop
+          ></video>
+        </div>
+        <div class="bg-overlay"></div>
+        <!-- Content -->
+        <div class="content-container">
+          <p class="number"><b>03</b>/09</p>
+          <h1>HongKong</h1>
+          <p class="description">
+            A short trip to HongKong
+          </p>
+          <div class="play-video-btn">
+            <a href="https://youtu.be/UhbH1v1PqNs" target="_blank"
+              >PLAY VIDEO</a
+            >
+          </div>
+          <div class="prevnext-btns">
+            <a href="#project2" class="btn prev">PREV 02</a>&nbsp;/&nbsp;
+            <a href="#project4" class="btn next">NEXT 04</a>
+          </div>
+        </div>
+      </section>
+      <section id="project4" class="section">
+        <!-- Video Background -->
+        <div class="bg-container">
+          <video
+            id="video-bg1"
+            src="video/Freeasy clothing.mp4"
+            autoplay
+            muted
+            loop
+          ></video>
+        </div>
+        <div class="bg-overlay"></div>
+        <!-- Content -->
+        <div class="content-container">
+          <p class="number"><b>04</b>/09</p>
+          <h1>Freeasy clothing</h1>
+          <p class="description">
+            Street fashion brand
+          </p>
+          <div class="play-video-btn">
+            <a href="https://youtu.be/9WBIKrpgRiU" target="_blank"
+              >PLAY VIDEO</a
+            >
+          </div>
+          <div class="prevnext-btns">
+            <a href="#project3" class="btn prev">PREV 03</a>&nbsp;/&nbsp;
+            <a href="#project5" class="btn next">NEXT 05</a>
+          </div>
+        </div>
+      </section>
+      <section id="project5" class="section">
+        <!-- Video Background -->
+        <div class="bg-container">
+          <video
+            id="video-bg1"
+            src="video/PLANET EARTH.mp4"
+            autoplay
+            muted
+            loop
+          ></video>
+        </div>
+        <div class="bg-overlay"></div>
+        <!-- Content -->
+        <div class="content-container">
+          <p class="number"><b>05</b>/09</p>
+          <h1>PLANET EARTH</h1>
+          <p class="description">
+            Shooting in a beautiful countryside in Japan
+          </p>
+          <div class="play-video-btn">
+            <a href="https://youtu.be/hGKM1fkfwWM" target="_blank"
+              >PLAY VIDEO</a
+            >
+          </div>
+          <div class="prevnext-btns">
+            <a href="#project4" class="btn prev">PREV 04</a>&nbsp;/&nbsp;
+            <a href="#project6" class="btn next">NEXT 06</a>
+          </div>
+        </div>
+      </section>
+      <section id="project6" class="section">
+        <!-- Video Background -->
+        <div class="bg-container">
+          <video
+            id="video-bg1"
+            src="video/HIVOLTAGE VOL12.mp4"
+            autoplay
+            muted
+            loop
+          ></video>
+        </div>
+        <div class="bg-overlay"></div>
+        <!-- Content -->
+        <div class="content-container">
+          <p class="number"><b>06</b>/09</p>
+          <h1>HIVOLTAGE VOL12</h1>
+          <p class="description">
+            Dance battle of high school bboys
+          </p>
+          <div class="play-video-btn">
+            <a href="https://youtu.be/n0JLx8XxpFs" target="_blank"
+              >PLAY VIDEO</a
+            >
+          </div>
+          <div class="prevnext-btns">
+            <a href="#project5" class="btn prev">PREV 05</a>&nbsp;/&nbsp;
+            <a href="#project7" class="btn next">NEXT 07</a>
+          </div>
+        </div>
+      </section>
+      <section id="project7" class="section">
+        <!-- Video Background -->
+        <div class="bg-container">
+          <video
+            id="video-bg1"
+            src="video/MELBOURNE.mp4"
+            autoplay
+            muted
+            loop
+          ></video>
+        </div>
+        <div class="bg-overlay"></div>
+        <!-- Content -->
+        <div class="content-container">
+          <p class="number"><b>07</b>/09</p>
+          <h1>MELBOURNE</h1>
+          <p class="description">
+            Awesome experience in a trip to Melbourne
+          </p>
+          <div class="play-video-btn">
+            <a href="https://youtu.be/xfE879Db6aY" target="_blank"
+              >PLAY VIDEO</a
+            >
+          </div>
+          <div class="prevnext-btns">
+            <a href="#project6" class="btn prev">PREV 06</a>&nbsp;/&nbsp;
+            <a href="#project8" class="btn next">NEXT 08</a>
+          </div>
+        </div>
+      </section>
+      <section id="project8" class="section">
+        <!-- Video Background -->
+        <div class="bg-container">
+          <video
+            id="video-bg1"
+            src="video/Crosswalk.mp4"
+            autoplay
+            muted
+            loop
+          ></video>
+        </div>
+        <div class="bg-overlay"></div>
+        <!-- Content -->
+        <div class="content-container">
+          <p class="number"><b>08</b>/09</p>
+          <h1>Crosswalk</h1>
+          <p class="description">
+            Crosswalk in the night town of Osaka
+          </p>
+          <div class="play-video-btn">
+            <a href="https://youtu.be/Jr2owf8PRJs" target="_blank"
+              >PLAY VIDEO</a
+            >
+          </div>
+          <div class="prevnext-btns">
+            <a href="#project7" class="btn prev">PREV 07</a>&nbsp;/&nbsp;
+            <a href="#project9" class="btn next">NEXT 09</a>
+          </div>
+        </div>
+      </section>
+      <section id="project9" class="section">
+        <!-- Video Background -->
+        <div class="bg-container">
+          <video
+            id="video-bg1"
+            src="video/Piece of Memory.mp4"
+            autoplay
+            muted
+            loop
+          ></video>
+        </div>
+        <div class="bg-overlay"></div>
+        <!-- Content -->
+        <div class="content-container">
+          <p class="number"><b>09</b>/09</p>
+          <h1>Piece of Memory</h1>
+          <p class="description">
+            Pieces of my work.
+          </p>
+          <div class="play-video-btn">
+            <a href="https://youtu.be/Of148nuSvWk" target="_blank"
+              >PLAY VIDEO</a
+            >
+          </div>
+          <div class="prevnext-btns">
+            <a href="#project8" class="btn prev">PREV 08</a>&nbsp;/&nbsp;
+            <a href="#project1" class="btn next">NEXT 01</a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
