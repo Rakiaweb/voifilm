@@ -163,7 +163,7 @@ header .overlay-nav {
   background: white;
   overflow-y: scroll;
   visibility: hidden;
-  opacity: 0;
+  opacity: 1;
   -webkit-transform: translate3d(-100%, 0, 0);
           transform: translate3d(-100%, 0, 0);
   -webkit-transition: all 0.3s ease-in;
@@ -338,6 +338,7 @@ header footer a {
 body {
   margin: 0;
   padding: 0;
+  height: 100%;
   font-family: "Oswald", sans-serif;
   color: #fff;
   background-color: #000;
@@ -507,6 +508,104 @@ section #view-work-btn:hover:after {
   width: 98%;
 }
 
+#about {
+  width: 100vw;
+  z-index: 89;
+  background-color: #000;
+  visibility: hidden;
+}
+
+#about.active {
+  visibility: visible;
+}
+
+#about .about-container {
+  width: 100vw;
+  height: 100%;
+  min-height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow-y: scroll;
+  background-color: #000;
+}
+
+#about .about-container .boxes {
+  width: 50vw;
+  max-width: 500px;
+  margin: auto;
+  padding-bottom: 20vh;
+  position: relative;
+  top: 20vh;
+}
+
+#about .about-container .boxes .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 10vh;
+}
+
+#about .about-container .boxes .box .col {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+#about .about-container .boxes .box .col p {
+  letter-spacing: 2px;
+  font-size: 15px;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+#about .about-container .boxes .box .col p a {
+  display: inline-block;
+  z-index: 99;
+  cursor: pointer;
+}
+
+#about .about-container .boxes .box .col p a::after {
+  content: "";
+  display: block;
+  border-bottom: solid 1px white;
+  width: 0;
+  -webkit-transition: width 0.3s;
+  transition: width 0.3s;
+}
+
+#about .about-container .boxes .box .col p a:hover:after {
+  width: 98%;
+}
+
+#about .about-container .boxes .box .col-a {
+  font-weight: 700;
+}
+
+#about .about-container .boxes .box .col-b {
+  font-weight: 300;
+}
+
+#about .about-container .boxes .profile {
+  padding-bottom: 10vh;
+}
+
+#about .about-container .boxes .profile h1 {
+  margin: 0;
+  padding: 14px 0;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+}
+
+#about .about-container .boxes .profile p {
+  line-height: 30px;
+}
+
 @media (min-aspect-ratio: 16 / 9) {
   video {
     width: 100%;
@@ -518,6 +617,38 @@ section #view-work-btn:hover:after {
   video {
     width: auto;
     height: 132%;
+  }
+}
+
+@media (max-width: 426px) {
+  #about .about-container .boxes .box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 8vh;
+  }
+  #about .about-container .boxes .box .col p,
+  #about .about-container .boxes .box .col-a p,
+  #about .about-container .boxes .box .col-b p {
+    font-size: 15px;
+  }
+  #about .about-container .boxes .profile {
+    margin-bottom: 5vh;
+  }
+  #about .about-container .boxes .profile h3 {
+    font-size: 1rem;
+    letter-spacing: 0;
+  }
+  #about .about-container .boxes .profile h1 {
+    font-size: 2rem;
+    padding-bottom: 5vh;
+  }
+  #about .about-container .boxes .profile p {
+    line-height: 20px;
   }
 }
 /*# sourceMappingURL=main.css.map */
