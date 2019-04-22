@@ -9,10 +9,10 @@
       href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles/main.css" />
     <script src="https://code.jquery.com/jquery-3.4.0.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
     <script type="text/javascript" src="main.js" async></script>
+    <link rel="stylesheet" href="styles/main.css" />
   </head>
   <body>
     <header>
@@ -21,7 +21,7 @@
 
       <div class="top-right">
         <ul class="top-right-content">
-          <li class="about top-right-item"><a href="about.html">ABOUT</a></li>
+          <li class="about-btn top-right-item"><a href="#about">ABOUT</a></li>
           <li class="contact top-right-item">
             <a href="mailto:ky.32012.voilf@gmail.com">CONTACT</a>
           </li>
@@ -50,8 +50,8 @@
           <li class="nav-item">
             <a href="index.html" class="nav-link">HOME</a>
           </li>
-          <li class="nav-item">
-            <a href="about.html" class="nav-link">ABOUT</a>
+          <li class="nav-item about-btn">
+            <a href="#about" class="nav-link">ABOUT</a>
           </li>
           <li class="nav-item">
             <a href="mailto:ky.32012.voilf@gmail.com" class="nav-link"
@@ -64,7 +64,7 @@
         <div id="projects-list">
           <div class="boxes">
             <div class="box row project slide-in">
-              <a href="index.html#project1">
+              <a href="#project1">
                 <div class="col col-video">
                   <video
                     src="video/SEEZOO.mp4"
@@ -485,6 +485,72 @@
           </div>
         </div>
       </section>
+    </div>
+    <div id="about">
+      <div class="about-container">
+        <div class="boxes">
+          <div class="box profile about-content">
+            <div class="col col-a">
+              <p>Filmmaker</p>
+            </div>
+            <div class="col col-b">
+              <h1>Voi</h1>
+              <p>Creative filmmaker, editor and bboy living in Osaka(Japan).</p>
+            </div>
+          </div>
+          <div class="box about-content">
+            <div class="col col-a">
+              <p>Material</p>
+            </div>
+            <div class="col col-b">
+              <p>Camera Sony α7III</p>
+              <p>Gimbal Zhiyun Crane plus</p>
+            </div>
+          </div>
+          <div class="box about-content">
+            <div class="col col-a">
+              <p>Skills</p>
+            </div>
+            <div class="col col-b">
+              <p>Premiere Pro</p>
+              <p>After Effects</p>
+            </div>
+          </div>
+          <div class="box about-content">
+            <div class="col col-a">
+              <p>Contact</p>
+            </div>
+            <div class="col col-b">
+              <p>
+                <a href="https://www.instagram.com/voifilm" target="_blank"
+                  >Instagram</a
+                >
+              </p>
+              <p>
+                <a href="https://www.youtube.com/user/voilf" target="_blank"
+                  >YouTube</a
+                >
+              </p>
+              <p><a href="mailto:ky.32012.voilf@gmail.com">Email</a></p>
+            </div>
+          </div>
+          <div class="box about-content">
+            <div class="col col-a">
+              <p>Credits</p>
+            </div>
+            <div class="col col-b">
+              <p>
+                Design & Code by
+                <span
+                  ><a href="https://www.instagram.com/akrspwb/" target="_blank"
+                    >Akira Suto</a
+                  ></span
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
