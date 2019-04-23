@@ -53,6 +53,8 @@ function openNav() {
 function closeNav() {
   TweenMax.to(".box.project", 0.5, { opacity: 0, y: 0 });
   TweenMax.to(".box.project", 0, { opacity: 1, y: 0, delay: 2 });
+  TweenMax.to(".nav-links-container", 0.5, { opacity: 0, delay: 0 });
+  TweenMax.to(".nav-links-container", 0, { opacity: 1, delay: 2 });
   menuBtn.classList.remove("close");
   setTimeout(function() {
     overlayNav.classList.remove("show");
