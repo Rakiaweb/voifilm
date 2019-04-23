@@ -1,0 +1,292 @@
+@mixin underlineAnimation($color) {
+  &::after {
+    content: "";
+    display: block;
+    border-bottom: solid 1px $color;
+    width: 0;
+    transition: width 0.3s;
+    // transform: scaleX(0.0001);
+    // transition: transform 350ms ease-in-out;
+  }
+  &:hover:after {
+    width: 100%;
+    // transform: scaleX(1);
+  }
+}
+
+header {
+  // VOIFILM Icon
+  .icon {
+    position: fixed;
+    top: 2vh;
+    left: 2vw;
+    z-index: 100;
+    a {
+      font-size: 0.8rem;
+      font-weight: 400;
+      letter-spacing: 1px;
+      transition: all 1s ease-in-out;
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+    &.show {
+      a {
+        color: #000;
+      }
+    }
+  }
+
+  // Top Right
+  .top-right {
+    width: 100%;
+    height: 10%;
+    position: fixed;
+    z-index: 99;
+    .top-right-content {
+      position: absolute;
+      top: 1vh;
+      right: 2vw;
+      padding: 0;
+      margin: 0;
+      .top-right-item {
+        display: inline-block;
+        font-size: 0.8rem;
+        font-weight: 400;
+        letter-spacing: 1px;
+        padding: 10px 4px;
+        a {
+          transition: all 1s ease-in-out;
+          @include underlineAnimation(white);
+        }
+      }
+    }
+
+    &.show {
+      .top-right-content {
+        .top-right-item {
+          a {
+            color: black;
+            @include underlineAnimation(black);
+          }
+        }
+      }
+    }
+  }
+
+  // Menu Icon
+  #menu-btn {
+    position: fixed;
+    top: 49vh;
+    left: 2vw;
+    z-index: 99;
+    cursor: pointer;
+    visibility: visible;
+    .btn-line {
+      background-color: white;
+      width: 25px;
+      height: 2px;
+      margin: 0 0 6px 0;
+      transition: all 0.5s ease-in-out;
+    }
+
+    &.close {
+      .btn-line {
+        background-color: black;
+      }
+      // Lines Rotate
+      .top-line {
+        transform: rotate(405deg) translate(6px, 6px);
+        background-color: black;
+      }
+      .middle-line {
+        opacity: 0;
+      }
+      .bottom-line {
+        transform: rotate(-405deg) translate(5px, -5px);
+      }
+    }
+  }
+
+  // Navigation Menu
+  // Home About Contact Link
+  .nav-links-container {
+    position: fixed;
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease-in-out;
+    .nav-links {
+      padding: 0;
+      margin: 0;
+      position: fixed;
+      top: 2vh;
+      right: 2vw;
+      z-index: 99;
+      .nav-item {
+        display: inline;
+        padding: 15px;
+        a {
+          display: inline-block;
+          color: black;
+          font-size: 1.2rem;
+          font-weight: 500;
+          padding: 1px;
+        }
+      }
+    }
+    &.show {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  // Overlay
+  .overlay-nav {
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 90;
+    background: white;
+    overflow-y: scroll;
+    visibility: hidden; // Important!! for scroll
+    opacity: 1;
+    transform: translate3d(-100%, 0, 0);
+    transition: all 0.3s ease-in;
+    &.show {
+      visibility: visible;
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+    }
+
+    display: flex;
+    flex-direction: column;
+    #projects-list {
+      flex: 1;
+      order: 1;
+    }
+    footer {
+      flex: 1;
+      order: 2;
+    }
+
+    // Projects List
+    #projects-list {
+      width: 100%;
+      margin-top: 15vh;
+      margin-bottom: 10vh;
+      align-items: center;
+      .boxes {
+        width: 80vw; // Important!!
+        height: 100%;
+        max-width: 1000px;
+        margin: 0 auto;
+        .box {
+          margin-bottom: 10vh;
+          a {
+            display: flex;
+            .col {
+              flex: 1;
+              flex-basis: 50%;
+            }
+            .col-video {
+              img {
+                width: 100%;
+                height: 100%;
+                transition: all 0.5s ease-in-out;
+                &:hover {
+                  cursor: pointer;
+                  transform: scale(1.4);
+                }
+              }
+            }
+            .col-text {
+              display: flex;
+              h2 {
+                color: #000;
+                font-size: 2vh;
+                font-weight: 500;
+                letter-spacing: 1px;
+                margin: auto 0;
+                padding-left: 2vh;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Footer
+  footer {
+    width: 100%;
+    height: 50px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #aaaaaa;
+    text-align: center;
+    clear: both;
+    a {
+      color: #aaaaaa;
+    }
+  }
+}
+
+// Responsive
+/* Smartphones (portrait) ----------- */
+@media (max-width: 426px) {
+  header {
+    .icon {
+      visibility: hidden;
+    }
+    .top-right {
+      visibility: hidden;
+    }
+    #menu-btn {
+      visibility: visible;
+      position: fixed;
+      top: 3vh;
+      left: 5vw;
+    }
+    .overlay-nav {
+      .nav-links-container {
+      }
+    }
+  }
+}
+
+@media (min-width: 427px) {
+  header {
+    .nav-links-container {
+      &.show {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+    .overlay-nav {
+      #projects-list {
+        .boxes {
+          display: flex;
+          flex-wrap: wrap;
+          width: 60vw; // Important!!
+          justify-content: space-between;
+          .box {
+            flex-basis: 40%;
+            a {
+              display: flex;
+              flex-direction: column;
+              .col-text {
+                h2 {
+                  margin: 0;
+                  padding-left: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
